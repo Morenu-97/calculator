@@ -1,2 +1,2 @@
-# calculator
+# Calculator
 This is my first project!
