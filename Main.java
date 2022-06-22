@@ -32,8 +32,7 @@ public class Main {
         }
         return false;
     }
-
-    //    M. Coditional
+    //    M. Conditional
     public static void operations(int n, double a, double b) {
         if (n == 4) {
             if (b == 0) {
