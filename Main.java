@@ -32,8 +32,7 @@ public class Main {
         }
         return false;
     }
-
-    //    M. Coditional
+    //    M. Conditional
     public static void operations(int n, double a, double b) {
         if (n == 4) {
             if (b == 0) {
@@ -42,17 +41,16 @@ public class Main {
                 System.out.println(divide(a,b));
             }
         } else if (n == 1) {
-            System.out.println(a+b);
+            System.out.println(sum(a,b));
         } else if (n == 2) {
-            System.out.println(a-b);
+            System.out.println(subtract(a,b));
         } else if (n == 3) {
-            System.out.println(a*b);
+            System.out.println(multiply(a,b));
         }
     }
     //    M. operations
     public static double divide(double a, double b) {return a / b;}
     public static double sum(double a, double b) {return a + b;}
-    public static double multiply(double a, double b) {
-        return a * b;
-    }
+    public static double subtract(double a, double b) {return a - b;}
+    public static double multiply(double a, double b) {return a * b;}
 }
