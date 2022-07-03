@@ -5,3 +5,5 @@ This first version of the calculator works on the basis of a while loop, which a
 - Subtraction
 - Multiplication
 - Division
+- Radication
+- Absolute value.
