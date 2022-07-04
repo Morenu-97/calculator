@@ -1,7 +1,4 @@
 import java.util.Scanner;
-
-import static java.lang.Math.sqrt;
-
 public class Main {
     public static void main(String[] args) {
         Scanner kb = new Scanner(System.in);
@@ -29,17 +26,14 @@ public class Main {
 
     //     M. powerOff
     public static boolean powerOff(int option) {
-        if (option == 7) {
-            System.out.println("Power off");
-            return true;
-        } else if (option > 7) {
+        if (option >= 7) {
             System.out.println("Power off");
             return true;
         }
         return false;
     }
     //    M. Conditional
-    public static void operations(int n, double a,double b) {
+    public static void operations(int n, double a, double b) {
         if (n == 4) {
             if (b == 0) {
                 System.out.println("Can not be divided by zero");
