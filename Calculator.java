@@ -1,6 +1,6 @@
 public class Calculator {
-    //attributes
 
+    //attributes
     private String options;
     private boolean isOn;
     private double result;
@@ -9,7 +9,6 @@ public class Calculator {
     private String operator;
 
     //methods
-
     public String getOptions() {
         return options;
     }
@@ -63,6 +62,7 @@ public class Calculator {
         operator = array[1];
         digitTwo = Double.parseDouble(array[2]);
     }
+
     //    M. Conditional
     public void operate(String n, double a, double b) {
         if (n.equals("/")) {
@@ -79,6 +79,7 @@ public class Calculator {
             System.out.println(multiply(a,b));
         }
     }
+
     //    M. operations
     public double divide(double a, double b) {
         return a / b;
@@ -92,5 +93,15 @@ public class Calculator {
 
     public double multiply(double a, double b) {
         return a * b;
+    }
+    public static double sqrt(double a) {return  Math.sqrt(a);}
+
+    //     M. powerOff
+    public static boolean powerOff(String option) {
+        if (option.equals("bye")) {
+            System.out.println("Power off");
+            return true;
+        }
+        return false;
     }
 }
