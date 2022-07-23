@@ -17,7 +17,7 @@ public class Calculator {
         this.options = options;
     }
 
-    public boolean isOn() {
+    public boolean getIsOn() {
         return isOn;
     }
 
@@ -55,7 +55,7 @@ public class Calculator {
         this.operator = operator;
     }
 
-    // split operations
+    // split operation
     public void splitOperation(String a){
         String[] array = a.split("");
         digitOne = Double.parseDouble(array[0]);
