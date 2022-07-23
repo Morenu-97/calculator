@@ -10,7 +10,7 @@ public class Calculator {
 
     //methods
     public String getOptions() {
-        return options;
+        return this.options;
     }
 
     public void setOptions(String options) {
@@ -18,7 +18,7 @@ public class Calculator {
     }
 
     public boolean getIsOn() {
-        return isOn;
+        return this.isOn;
     }
 
     public void setOn(boolean isOn) {
@@ -26,7 +26,7 @@ public class Calculator {
     }
 
     public double getResult() {
-        return result;
+        return this.result;
     }
 
     public void setResult(double result) {
