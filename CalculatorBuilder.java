@@ -8,6 +8,7 @@ public class CalculatorBuilder {
         while (true) {
             System.out.println("Power on");
             String op = kb.nextLine();
+            calculator.setOn(false);
             if (calculator.powerOff(op)) break;
             calculator.splitOperation(op);
             calculator.operate(calculator.getOperator(), calculator.getDigitOne(),calculator.getDigitTwo());

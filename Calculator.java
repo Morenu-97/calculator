@@ -94,10 +94,10 @@ public class Calculator {
     public double multiply(double a, double b) {
         return a * b;
     }
-    public static double sqrt(double a) {return  Math.sqrt(a);}
+    public double sqrt(double a) {return  Math.sqrt(a);}
 
     //     M. powerOff
-    public static boolean powerOff(String option) {
+    public boolean powerOff(String option) {
         if (option.equals("bye")) {
             System.out.println("Power off");
             return true;
