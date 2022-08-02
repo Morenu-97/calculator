@@ -1,28 +1,26 @@
 public class Calculator {
 
     //attributes
-    private String options;
-    private boolean isOn;
+    private boolean isPowerOn;
     private double result;
     private double digitOne;
     private double digitTwo;
     private String operator;
 
+    public Calculator(){
+        this.isPowerOn= true;
+        this.digitOne = 0;
+        this.result = 0;
+    }
+
     //methods
-    public String getOptions() {
-        return this.options;
+
+    public boolean getIsPowerOn() {
+        return this.isPowerOn;
     }
 
-    public void setOptions(String options) {
-        this.options = options;
-    }
-
-    public boolean getIsOn() {
-        return this.isOn;
-    }
-
-    public void setOn(boolean isOn) {
-        this.isOn = isOn;
+    public void setIsPowerOn(boolean isPowerOn) {
+        this.isPowerOn = isPowerOn;
     }
 
     public double getResult() {
@@ -57,26 +55,36 @@ public class Calculator {
 
     // split operation
     public void splitOperation(String a){
-        String[] array = a.split("");
-        digitOne = Double.parseDouble(array[0]);
-        operator = array[1];
-        digitTwo = Double.parseDouble(array[2]);
+        String[] array = a.split(" ");
+        if (array.length == 3){
+            digitOne = Double.parseDouble(array[0]);
+            operator = array[1];
+            digitTwo = Double.parseDouble(array[2]);
+        } else if (array.length == 2) {
+            digitOne = this.result;
+            operator = array[0];
+            digitTwo = Double.parseDouble(array[1]);
+        }
     }
 
     //    M. Conditional
-    public void operate(String n, double a, double b) {
-        if (n.equals("/")) {
-            if (b == 0) {
+    public void operate() {
+        if (this.operator.equals("/")) {
+            if (this.digitTwo == 0) {
                 System.out.println("Can not be divided by zero");
             } else {
-                System.out.println(divide(a,b));
+                this.result = divide(this.digitOne, this.digitTwo);
+                System.out.println(this.result);
             }
-        } else if (n.equals("+")) {
-            System.out.println(sum(a,b));
-        } else if (n.equals("-")) {
-            System.out.println(subtract(a,b));
-        } else if (n.equals("*")) {
-            System.out.println(multiply(a,b));
+        } else if (this.operator.equals("+")) {
+            this.result = sum(this.digitOne, this.digitTwo);
+            System.out.println(this.result);
+        } else if (this.operator.equals("-")) {
+            this.result = subtract(this.digitOne, this.digitTwo);
+            System.out.println(this.result);
+        } else if (this.operator.equals("*")) {
+            this.result = multiply(this.digitOne, this.digitTwo);
+            System.out.println(this.result);
         }
     }
 
@@ -94,14 +102,13 @@ public class Calculator {
     public double multiply(double a, double b) {
         return a * b;
     }
-    public double sqrt(double a) {return  Math.sqrt(a);}
 
     //     M. powerOff
-    public boolean powerOff(String option) {
+    public boolean isPowerOff(String option) {
         if (option.equals("bye")) {
+            this.isPowerOn = false;
             System.out.println("Power off");
-            return true;
         }
-        return false;
+        return !this.isPowerOn;
     }
 }
