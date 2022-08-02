@@ -1,4 +1,4 @@
-# Calculator :climing:
+# Calculator 🔢➕➖✖➗🔢
 ¡This is my first project! It is divided into two versions:
 The first version of the calculator, located in the Main class, works on the basis of a while loop, which allows the calculator to remain on until the user decides to turn it off. It performs the following operations:
 - Addition
